@@ -54,9 +54,9 @@ export default {
 				}
 			},
 			fontFamily: {
-				'luxury': ['Didot', 'Playfair Display', 'serif'],
-				'elegant': ['Playfair Display', 'serif'],
-				'serif': ['Didot', 'Playfair Display', 'serif'],
+				'luxury': ['OPTIUniversSixtySeven', 'Inter', 'sans-serif'],
+				'elegant': ['OPTIUniversSixtySeven', 'Inter', 'sans-serif'],
+				'sans': ['OPTIUniversSixtySeven', 'Inter', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

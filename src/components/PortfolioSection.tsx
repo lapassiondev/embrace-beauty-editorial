@@ -30,18 +30,21 @@ const PortfolioSection = () => {
           </p>
         </div>
 
-        {/* Masonry Grid */}
-        <div className="masonry-grid animate-fade-in">
+        {/* Improved Grid Layout */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 animate-fade-in">
           {portfolioImages.map((image, index) => (
             <div 
               key={index} 
-              className="masonry-item cursor-pointer group"
+              className={`cursor-pointer group overflow-hidden ${
+                index % 7 === 0 ? 'md:col-span-2 md:row-span-2' : 
+                index % 5 === 0 ? 'lg:col-span-2' : ''
+              }`}
               onClick={() => setLightboxImage(image.src)}
             >
               <img 
                 src={image.src} 
                 alt={image.alt}
-                className="w-full animate-zoom-hover group-hover:shadow-luxury"
+                className="w-full h-full object-cover animate-zoom-hover group-hover:shadow-luxury"
               />
             </div>
           ))}

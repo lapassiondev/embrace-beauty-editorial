@@ -20,9 +20,9 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    /* Luxury Pink - Blush tones */
-    --primary: 350 100% 88%;
-    --primary-foreground: 0 0% 0%;
+    /* Luxury Pink - Darker blush tones */
+    --primary: 340 80% 65%;
+    --primary-foreground: 0 0% 100%;
 
     /* Luxury Black */
     --secondary: 0 0% 0%;
@@ -32,9 +32,9 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 40%;
 
-    /* Accent pink for highlights */
-    --accent: 350 100% 85%;
-    --accent-foreground: 0 0% 0%;
+    /* Accent pink for highlights - darker */
+    --accent: 340 75% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -119,19 +119,19 @@
   }
 
   body {
-    @apply bg-background text-foreground font-serif;
-    font-family: 'Didot', 'Playfair Display', serif;
+    @apply bg-background text-foreground;
+    font-family: 'OPTIUniversSixtySeven', 'Inter', sans-serif;
   }
 
   /* Luxury Typography Classes */
   .font-luxury {
-    font-family: 'Didot', 'Playfair Display', serif;
+    font-family: 'OPTIUniversSixtySeven', 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: 0.02em;
   }
 
   .font-elegant {
-    font-family: 'Didot', 'Playfair Display', serif;
+    font-family: 'OPTIUniversSixtySeven', 'Inter', sans-serif;
     font-weight: 400;
     letter-spacing: 0.01em;
   }
@@ -141,13 +141,24 @@
     scroll-behavior: smooth;
   }
 
-  /* Custom animations */
+  /* Custom animations with scroll */
   .animate-fade-in {
     animation: fadeIn 0.8s ease-out forwards;
   }
 
   .animate-fade-in-up {
     animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+
+  .animate-fade-in-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .animate-zoom-hover {

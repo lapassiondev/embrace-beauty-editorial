@@ -1,12 +1,18 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import emiliaPortrait from "@/assets/emilia-portrait.jpg";
 
 const AboutSection = () => {
+  useScrollAnimation();
+
   return (
     <section id="about" className="py-24 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Portrait Image */}
-          <div className="relative animate-fade-in">
+          <div 
+            className="relative animate-fade-in-scroll"
+            data-scroll-id="about-image"
+          >
             <div className="aspect-[3/4] overflow-hidden">
               <img 
                 src={emiliaPortrait} 
@@ -17,7 +23,10 @@ const AboutSection = () => {
           </div>
           
           {/* Content */}
-          <div className="animate-fade-in-up">
+          <div 
+            className="animate-fade-in-scroll"
+            data-scroll-id="about-content"
+          >
             <h2 className="font-luxury text-5xl lg:text-6xl mb-12 text-foreground">
               The Artist
             </h2>
